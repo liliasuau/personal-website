@@ -1,0 +1,30 @@
+<!-- Aside (Right Panel) -->
+<aside class="sigma_aside sigma_aside-right sigma_aside-right-panel sigma_aside-bg">
+  <app-canvas></app-canvas>
+</aside>
+<div class="sigma_aside-overlay aside-trigger-right"></div>
+
+<nav class="navbar navbar-expand-lg navbar-light" id="nav">
+    <a class="navbar-brand" routerLink="">
+      <img src="{{currImage}}">
+      <!-- <span>Lilia Suau</span> -->
+    </a>
+
+    <div class="flex-column" id="navbar">
+      <button type="button" class="menu-toggle" (click)="openCanvas()" id="menu-toggle"></button>
+        <!-- <ul class="navbar-nav justify-content-center w-100 px-3 scrollspy">
+            <ul class="mr-auto"></ul>
+            <li class="nav-item" [ngClass]="{ active: currentSection === 'intro' }" (click)="scrollTo('intro')">
+                <a href="javascript:" class="nav-link" routerLink="" [ngClass]="{ active: currentSection === 'intro' }">
+                  <span>Home</span>
+                </a>
+            </li>
+
+            <li class="nav-item" [ngClass]="{ active: currentSection === 'about' }" (click)="scrollTo('about')">
+                <a href="javascript:" class="nav-link" [ngClass]="{ active: currentSection === 'about' }">
+                  <span>About</span>
+                </a>
+            </li>
+        </ul> -->
+    </div>
+</nav>

@@ -1,0 +1,243 @@
+$fonthead: 'gilroy', sans-serif;
+$fontstack: 'gilroy', sans-serif;
+
+$colordark: #353353;
+// $background-dark: #181817;
+$background-dark: #1c1b21;
+$white: #fff;
+$colorpink: #ff5c69;
+$colorblue: #6c6ce5;
+$colordefault: #454360;
+$electric: #4831d4;
+$highlighter: #ccf381;
+
+$gray-gilroy: #e8e8ea;
+$pgray-gilroy: #b8b3c8;
+$light-gilroy: #ae98e4;
+$gilroy: #7448ff;
+
+$black: #27251f;
+// $text: #514c46;
+// $light-text: #6D5F65;
+$text-900: #24292f;
+$text: #514746;
+$text-700: #716665;
+$text-600: #867a7a;
+$text-500: #b0a4a3;
+$text-400: #cfc2c1;
+$text-300: #f1e4e3;
+$text-200: #fcefee;
+$text-100: #fff3f3;
+$text-50: #fff8f8;
+
+$dark-white: #e6e6e6;
+$google-violet: #ebf0fa;
+$google-dark-violet: #d5def0;
+$blue: #51abcb;
+$light-blue: #E6F4F1;
+$coral: #ff5c69;
+$dark-coral: #DD5a5a;
+
+$yellow: #f0efea;
+$gold-crayola: #F6CA83;
+
+$gray-50: #FAFAFA;;
+$gray-100: #F5F5F5;
+$gray-200: #EEEEEE;
+$gray-300: #E0E0E0;
+
+$green-50: #e6f9e9;
+$green-100: #c3f0c8;
+$green-200: #a0e5a9;
+$green-300: #7dda8a;
+$green-400: #61d072;
+$green-500: #46c65a;
+$green-600: #3cb650;
+$green-700: #30a344;
+$green-800: #259239;
+$green-900: #0f7226;
+
+@mixin transition($second) {
+  -webkit-transition: all $second ease-in-out;
+  -moz-transition: all $second ease-in-out;
+  transition: all $second ease-in-out;
+}
+
+@supports (font-variation-settings: "wght" 900, 800, 700, 600, 500, 400) {
+  .extra-bold {
+    font-family: 'Montserrat';
+    font-weight: 800;
+  }
+}
+
+/*=================================================================*/
+/*                      mark-pro                              
+/*=================================================================*/
+
+@font-face {
+  font-family: mark-pro;
+  src: url(./../assets/fonts/mark-pro-hairline.otf) format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: mark-pro;
+  src: url(./../assets/fonts/mark-pro.otf) format("opentype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: mark-pro;
+  src: url(./../assets/fonts/mark-pro-medium.otf) format("opentype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: mark-pro;
+  src: url(./../assets/fonts/mark-pro-bold.otf) format("opentype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: mark-pro;
+  src: url(./../assets/fonts/mark-pro-heavy.otf) format("opentype");
+  font-weight: 800;
+}
+
+/*=================================================================*/
+/*                      sfui                             
+/*=================================================================*/
+
+@font-face  {
+  font-family: sfui;
+  src: url(./../assets/fonts/SFUI/SFUIText-Light.woff) format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: sfui;
+  src: url(./../assets/fonts/SFUI/SFUIText-Regular.woff) format("woff");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: sfui;
+  src: url(./../assets/fonts/SFUI/SFUIText-Medium.woff) format("woff");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: sfui;
+  src: url(./../assets/fonts/SFUI/SFUIText-Semibold.woff) format("woff");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: sfui;
+  src: url(./../assets/fonts/SFUI/SFUIText-Bold.woff) format("woff");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: sfui;
+  src: url(./../assets/fonts/SFUI/SFUIText-Heavy.woff) format("woff");
+  font-weight: 900;
+}
+
+// ----------------- Gilroy  ----------------- //
+
+@font-face {
+  font-family: gilroy;
+  src: url(./../assets/fonts/gi/Gilroy-Light.ttf) format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: gilroy;
+  src: url(./../assets/fonts/gi/Gilroy-Medium.ttf) format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: gilroy;
+  src: url(./../assets/fonts/gi/Gilroy-Regular.ttf) format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: gilroy;
+  src: url(./../assets/fonts/gi/Gilroy-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+}
+
+
+@font-face {
+  font-family: gilroy;
+  src: url(./../assets/fonts/gi/Gilroy-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+
+
+@font-face {
+  font-family: gilroy;
+  src: url(./../assets/fonts/gi/Gilroy-ExtraBold.ttf) format("truetype");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: gilroy;
+  src: url(./../assets/fonts/gi/Gilroy-Heavy.ttf) format("truetype");
+  font-weight: 900;
+}
+
+/*=================================================================*/
+/*                      font styles                             
+/*=================================================================*/
+
+p {
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: 600;
+  &.b-7 {
+    font-weight: 700 !important;
+  }
+  &.b-8 {
+    font-weight: 800 !important;
+  }
+  &.b-9 {
+    font-weight: 900 !important;
+  }
+}
+
+.text-gray {
+  color: $gray-300;
+}
+
+.text-green {
+  color: $green-800;
+}
+
+.text-blue {
+  color: $electric;
+}
+
+#strike > h3, 
+#strike > a {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  color: $electric;
+  &::after {
+    content: "";
+    background: $highlighter;
+    height: .4em;
+    width: 109%;
+    display: block;
+    margin-top: -.7rem;
+    margin-left: -4%;
+    position: absolute;
+    z-index: -1;
+  }
+}

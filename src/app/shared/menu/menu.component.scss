@@ -1,0 +1,58 @@
+$blue: #51abcb;
+$text: #2C2628;
+
+.navbar-light .navbar-toggler-icon { // white
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-light .navbar-toggler {
+    border: 0;
+}
+
+@keyframes up {
+    0% { transform: rotate(0deg); }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes down {
+    from   { transform: rotate(180deg); }
+    to { transform: rotate(0deg);}
+}
+
+.logo { 
+    width: 80px;
+    height: scale(100%);
+}
+
+.navbar-brand > img {
+    width: 100px;
+    height: auto;
+    max-width: unset;
+}
+
+.navbar-brand.scroll {
+    animation: hide 0.4s linear;
+    animation-fill-mode: forwards;
+    // width: 40px;
+    // overflow: hidden; 
+}
+
+@keyframes hide {
+    0% {
+      display: block;
+      opacity: 1;
+    }
+    99% {
+      display: block;
+    }
+    100% {
+      display: none;
+      opacity: 0;
+    }
+  }
+
+  .navbar-expand-lg {
+    justify-content: space-between;
+  }

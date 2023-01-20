@@ -1,0 +1,120 @@
+
+@import 'sass/mixins';
+@import 'sass/base';
+@import 'sass/main';
+@import 'sass/elements';
+@import 'sass/buttons';
+@import 'sass/responsive';
+
+.text-sm {
+    font-size: 12px;
+}
+
+body {
+    color: $text !important;
+}
+
+.spacer-20 {
+    height: 20px;
+  }
+
+.spacer-30 {
+    height: 30px;
+}
+
+.spacer-60 {
+    height: 60px;
+}
+
+.bg-white {
+    background: $white;
+}
+
+.bg-dark-c {
+    background-color: $background-dark;
+    color: $white;
+}
+
+.shadow-dark {
+    box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+}
+
+.rounded {
+    border-radius: 20px !important;
+}
+
+/* ---------------------------- Menu styling ---------------------------- */
+.navbar-light .navbar-nav .nav-link {
+    transition: color .2s ease;
+    font-weight: 700;
+
+    &:hover {
+        color: $green-500 !important;
+    }
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: $text;
+}
+
+// .navbar-light .navbar-toggler-icon { // dark gray
+//     background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+// }
+
+.active {
+    color: $green-500 !important;
+}
+
+.navbar {
+    padding: 1rem 5rem;
+    align-items: unset;
+    transition: all 0.6s;
+    a {
+        color: $white !important;
+        font-weight: 700;
+
+        &.top-menu {
+            font-weight: 500;
+        }
+    }
+}
+
+/* ---------------------------- elements ---------------------------- */
+
+.element {
+    padding: 100px;
+    > h1 {
+        font-size: 44px;
+        font-weight: 900;
+    }
+    h1 {
+      font-weight: 300;
+      font-size: 2rem;
+    }
+    h5 {
+      font-weight: 900 !important;
+      text-transform: uppercase;
+    }
+    h5, p {
+      font-size: 0.9rem;
+    }
+}
+
+.justify-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.mat-form-field.mat-form-field-invalid .mat-form-field-label {
+    color: $text !important;
+}
+
+.mat-form-field.mat-warn .mat-input-element, .mat-form-field-invalid .mat-input-element {
+    caret-color: $text !important;
+}
+
+.mat-form-field.mat-form-field-invalid .mat-form-field-ripple, .mat-form-field.mat-form-field-invalid .mat-form-field-ripple.mat-accent {
+    background-color: #673ab7 !important;
+}

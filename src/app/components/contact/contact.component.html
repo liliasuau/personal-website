@@ -1,0 +1,68 @@
+<div class="element form">
+	<div class="content">
+		<div class="row justify-center">
+			<div class="col-md-12 col-lg-6 justify-center">
+				<div class="img-container">
+					<img src="assets/images/lily-street.png">
+				</div>
+			</div>
+			<div class="col-md-12 col-lg-6">
+				<div>
+					<h1 class="bold">Let's Talk!</h1>
+					<div class="bold">
+						<div>Don't like forms? Send me an <a href="mailto:lilysuau@gmail.com">email</a>.</div>
+					</div>
+					<div class="spacer-20"></div>
+				</div>
+				<form #myform = "ngForm" (ngSubmit) = "onSubmit(myform)">
+					<mat-form-field class="example-full-width" [hideRequiredMarker]="true">
+						<mat-label>Name</mat-label>
+						<input matInput [(ngModel)]="userName" name="name" #name="ngModel" required>
+					</mat-form-field>
+					<ng-container  *ngTemplateOutlet="validationTemplate;context:{
+						ctrl:name}">
+					</ng-container>
+					<mat-form-field class="example-full-width" [hideRequiredMarker]="true">
+						<mat-label>Email</mat-label>
+						<input matInput [(ngModel)]="userEmail" email="true" name="email" #email="ngModel" required>
+					</mat-form-field>
+					<ng-container  *ngTemplateOutlet="validationTemplate;context:{
+						ctrl:email}">
+					</ng-container>
+					<mat-form-field class="example-full-width" [hideRequiredMarker]="true">
+						<mat-label>Subject</mat-label>
+						<input matInput [(ngModel)]="userSubject" name="subject" #subject="ngModel" required>
+					</mat-form-field>
+					<ng-container  *ngTemplateOutlet="validationTemplate;context:{
+						ctrl:subject}">
+					</ng-container>
+					<mat-form-field class="example-full-width" [hideRequiredMarker]="true">
+						<mat-label>Message</mat-label>
+						<textarea matInput [(ngModel)]="userMessage" name="message" #message="ngModel"  required
+								  cdkTextareaAutosize
+								  #autosize="cdkTextareaAutosize"
+								  cdkAutosizeMinRows="1"
+								  cdkAutosizeMaxRows="5"></textarea>
+					</mat-form-field>
+					<ng-container *ngTemplateOutlet="validationTemplate;context:{
+						ctrl:message}">
+					</ng-container>
+					<div *ngIf="!isFormValid" class="angry">* Please fill out the required fields before submitting.</div>
+					<div class="submit"><button class="btn btn-blue" type="submit" >Send Message</button></div>
+				  </form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<ng-template #validationTemplate let-ctrl="ctrl" let-msg="msg" let-rMsg="rMsg">
+	<ng-container *ngIf="!isFormValid">
+		<div class="separator" *ngIf="ctrl.errors?.required">
+			<i *ngIf="ctrl == message" class="fa-solid fa-circle-exclamation msg"></i>
+			<i *ngIf="ctrl != message" class="fa-solid fa-circle-exclamation"></i>
+		</div>
+		<div class="separator" *ngIf="ctrl.errors?.email">
+			<i class="fa-solid fa-circle-exclamation"></i>
+		</div>
+	</ng-container>
+</ng-template>

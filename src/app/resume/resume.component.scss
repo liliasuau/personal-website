@@ -1,0 +1,47 @@
+i {
+    font-size: 10px;
+    margin-right: 5px;
+}
+
+p {
+    margin-bottom: 0;
+    // &.w-intro {
+    //     max-width: 52%;
+    // }
+}
+
+h4, h3 {
+    font-weight: 800;
+}
+
+h5 {
+    font-weight: 700;
+}
+
+.col-lg-2 {
+    min-width: 220px;
+    // margin-right: 2rem; //blank resume
+    margin-right: 4rem;
+}
+
+.col-lg-10 {
+    flex: 1;
+    > h5 {
+        font-size: 1.25rem !important;
+    }
+}
+
+.row {
+    max-width: 1050px;
+}
+
+.educ {
+    margin-bottom: 0;
+}
+
+.description {
+    a {
+        color: #4831d4 !important;
+        font-weight: 800;
+    }
+}

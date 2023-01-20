@@ -1,0 +1,509 @@
+/*=================================================================*/
+/*                      SECTIONS                             
+/*=================================================================*/
+
+section {
+    position: relative;
+  }
+  
+  .section-title {
+    font-size: 36px;
+    margin: 0;
+    margin-left: 14px;
+    position: relative;
+    &:before {
+      content: '';
+      background-image: url(./../assets/images/dots-bg.svg);
+      display: block;
+      height: 37px;
+      left: -14px;
+      top: -14px;
+      position: absolute;
+      width: 37px;
+    }
+  }
+
+/*=================================================================*/
+/*                      HOME                        
+/*=================================================================*/
+
+  section.great-lakes {
+    height: 100vh;
+    overflow: hidden;
+    // background-color: black;
+    background-color: $gilroy;
+    color: $white;
+
+    > img {
+        margin-top: -120px;
+        height: 150%;
+        opacity: 0.4;
+    }
+}
+
+.intro {
+    top: 35%;
+    h1 {
+        font-size: 8rem;
+        margin-bottom: 0;
+        font-weight: 800;
+    }
+    h4 {
+        font-size: 2.2rem;
+        margin-left: 4px;
+        font-weight: 500 !important;
+        span {
+          font-weight: 700 !important;
+        }
+        // font-weight: 700;
+    }
+  }
+
+.m-bottom, .intro, .m-contact {
+  position: absolute;
+  color: #fff;
+  left: 10%;
+}
+
+.m-bottom {
+  top: 90%;
+  p {
+    margin-left: 4px;
+  }
+}
+
+.m-contact {
+  top: 35%;
+  left: 89%;
+  rotate: 90deg;
+  p {
+    margin-left: 4px;
+  }
+}
+
+/*=================================================================*/
+/*                      ABOUT                       
+/*=================================================================*/
+
+#about {
+  padding: 10rem 10rem 5rem;
+  .content {
+    h3, h5 {
+      margin-bottom: 25px;
+    }
+    h3 {
+      font-size: 2rem;
+      font-weight: 300 !important;
+    }
+    h5, p {
+      font-size: 0.9rem;
+    }
+    h5 {
+      font-weight: 900;
+    }
+  }
+}
+
+
+  /*=================================================================*/
+/*                      PARALLAX SHAPES                              
+/*=================================================================*/
+  
+.scroll-down {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  span {
+    color: $colordefault;
+  }
+  .mouse {
+    border-color: $colordark;
+    .wheel {
+      background: $colordark;
+    }
+  }
+}
+
+.mouse-wrapper {
+  color: $white;
+  font-size: 14px;
+  display: block;
+  max-width: 100px;
+  margin: auto;
+  text-align: center;
+  &:hover {
+    color: $white;
+  }
+}
+
+@-webkit-keyframes ani-mouse {
+  0% {
+    top: 29%;
+  }
+  15% {
+    top: 50%;
+  }
+  50% {
+    top: 50%;
+  }
+  100% {
+    top: 29%;
+  }
+}
+@-moz-keyframes ani-mouse {
+  0% {
+    top: 29%;
+  }
+  15% {
+    top: 50%;
+  }
+  50% {
+    top: 50%;
+  }
+  100% {
+    top: 29%;
+  }
+}
+@keyframes ani-mouse {
+  0% {
+    top: 29%;
+  }
+  15% {
+    top: 50%;
+  }
+  50% {
+    top: 50%;
+  }
+  100% {
+    top: 29%;
+  }
+}
+
+.mouse {
+  border: solid 2px $white;
+  border-radius: 16px;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  height: 26px;
+  position: relative;
+  width: 20px;
+  .wheel {
+    background: $white;
+    border-radius: 100%;
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 4px;
+    -webkit-animation: ani-mouse 2s linear infinite;
+    -moz-animation: ani-mouse 2s linear infinite;
+    animation: ani-mouse 2s linear infinite;
+  }
+}
+
+/*=================================================================*/
+/*                      EXPERIENCE                          
+/*=================================================================*/
+#experience {
+  > p {
+    width: 48vw;
+  }
+  > a {
+    margin: 25px 0;
+    display: inline-block;
+    font-weight: 700;
+    cursor: pointer;
+    &:hover {
+        color: $pgray-gilroy;
+    }
+  }
+  .content {
+    padding: 3rem 0;
+    border-bottom: 2px solid $white;
+    h1 {
+      font-size: 100px;
+      font-weight: 900;
+    }
+    h2 {
+      // text-transform: uppercase;
+      font-size: 20px;
+      > a {
+        color: $light-gilroy;
+        &:hover {
+            color: $gilroy;
+        }
+      }
+    }
+    .tech-stack {
+      margin-left: 0;
+      > div {
+          margin-right: 10px;
+          padding: 2px 5px;
+          border: 1px solid $white;
+          border-radius: 3px;
+      }
+    }
+  }
+}
+
+#works {
+  h1 {
+    font-weight: 300 !important;
+    font-size: 2rem !important;
+  }
+  h5 {
+    font-weight: 900 !important;
+    text-transform: uppercase;
+  }
+  h5, p {
+    font-size: 0.9rem;
+  }
+}
+
+#works .tech-stack {
+  margin: 10px 0;
+  > p {
+      color: $gilroy;
+      margin-right: 10px;
+      padding: 2px 5px;
+      border: 1px solid $gilroy;
+      border-radius: 5px;
+  }
+}
+
+/*=================================================================*/
+/*                      BLOG                              
+/*=================================================================*/
+
+.animate-item {
+  overflow: hidden;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  @include transition(0.3s);
+  &:hover {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(-10px);
+  }
+}
+
+/*=================================================================*/
+/*                      RESUME                              
+/*=================================================================*/
+
+#resume {
+  padding: 110px !important;
+  font-family: sfui !important;
+  // background-color: #FCFDFF !important; // blank resume
+  background-color: #F1F3F5;
+  .technologies {
+    p {
+      font-size: 0.86rem;
+    }
+    .separator {
+      margin-bottom: 20px;
+      &:first-child {
+        p {
+          font-size: 0.92rem;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  h4, h3, h1 {
+    color: $electric;
+  }
+  .content {
+    padding: 25px 0;
+    &:last-child {
+      padding: 25px 0 0;
+    }
+    ul {
+      list-style: none;
+      .company {
+        margin-bottom: 2rem;
+        header {
+          > h4 {
+            margin-bottom: 0;
+          }
+          .date {
+            color: $text-600 !important;
+            font-weight: 500;
+          }
+        }
+      }
+      h4, h5 {
+          span {
+              color: #6D5F65;
+              font-weight: 500;
+          }
+          span::before {
+              content: '— ';
+          }
+      }
+      .description {
+        margin-left: 0.80em;
+        // max-width: 60%;
+        text-indent: -0.40em;
+      }
+    }
+  }
+}
+
+/*=================================================================*/
+/*                      MENU                             
+/*=================================================================*/
+
+.sigma_aside {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: $white;
+  // background-color: $gilroy;
+  // color: $white;
+  z-index: 999;
+  transition: .5s cubic-bezier(.77,0,.175,1);
+  overflow: auto;
+}
+
+.sigma_aside-overlay.aside-trigger-left,
+.sigma_aside.sigma_aside-left {
+    display: none;
+}
+
+.sigma_aside.sigma_aside-right {
+    left: auto;
+    right: -100vw;
+    padding: 30px;
+    width: 100vw;
+}
+
+.sigma_aside.sigma_aside-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .3;
+    z-index: -1;
+    background-position: 0 130%;
+    background-repeat: no-repeat;
+
+}
+
+.sigma_aside.sigma_aside-right .sidebar {
+    display: none;
+}
+
+.sigma_aside.open {
+    left: 0;
+}
+
+.sigma_aside.sigma_aside-right.open {
+    left: auto;
+    right: 0;
+}
+.sigma_aside.sigma_aside-right.open .sidebar{
+  display:block;
+}
+.sigma_aside.open+.sigma_aside-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sigma_aside-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    background-color: rgba(0, 0, 0, .7);
+    transition: .3s;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+
+.menu-toggle {
+  margin-left: auto;
+  z-index: 999;
+  width: 2.78em;
+  height: 2.09em;
+  background: none;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-flexbox;
+  display: inline-flex;
+  margin-top: 0.699em;
+  color: $white;
+  // color: $text;
+  // color: #4831d4;
+  border: 0;
+  &.black {
+    color: $colordark !important;
+  }
+  &::before, &::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-color: currentColor;
+  }
+  &::before {
+    top: 0;
+  }
+  &::after {
+    right: 0;
+    width: 72%;
+    top: 1.13em;
+  }
+}
+
+.menu-toggle.open {
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+  &::before {
+    color: $black;
+    margin-top: 0.8em;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  &::after {
+    color: $black;
+    margin-top: 0.8em;
+    top: 0;
+    width: 100%;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+}
+
+.footer {
+  padding: 35px 90px;
+  font-size: 14px;
+  font-weight: 800;
+  // background-color: $light-gilroy;
+  i {
+      margin: 0 10px;
+  }
+}

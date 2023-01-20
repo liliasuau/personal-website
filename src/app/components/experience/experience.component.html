@@ -1,0 +1,24 @@
+<div class="element" id="experience">
+    <h1>Experience</h1>
+    <p>{{introText}}</p>
+	<ng-container *ngFor="let index of data">
+		<div class="content">
+			<div class="row justify-center flex-row-reverse">
+				<div class="col-md-12 col-lg-6 justify-center">
+					<h1>{{index.year}}</h1>
+				</div>
+				<div class="col-md-12 col-lg-6">
+					<div>
+						<h2>{{index.position}} <a target="_blank" href="{{index.link}}">{{index.company}}</a></h2>
+						<p class="text-gray">{{index.description}}</p>
+						<p class="text-gray">{{index.more}}</p>
+					</div>
+					<!-- <div class="row tech-stack">
+						<div *ngFor="let c of index.stack">{{c}}</div>
+					</div> -->
+				</div>
+			</div>
+		</div>
+	</ng-container>
+	<a class="resume" (click)="downloadResume()">Download Resume <i class="fa-solid fa-arrow-right"></i></a>
+</div>

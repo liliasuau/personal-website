@@ -1,0 +1,17 @@
+.content {
+    margin-top: 200px;
+    max-width: 1000px;
+    text-align: center;
+    h1 {
+        font-size: 4rem;
+        font-weight: 900;
+    }
+}
+
+.nav-item > li {
+    list-style: none;
+    > a {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+}

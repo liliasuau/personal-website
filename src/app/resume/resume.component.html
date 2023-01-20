@@ -1,0 +1,72 @@
+<section id="resume">
+    <div class="row">
+        <div class="col-md-12 col-lg-2 technologies">
+            <div class="separator" id="strike">
+                <!-- <a class="bold b-7">Lilia Suau</a> -->
+                <a class="bold b-7" href="mailto:lilysuau@gmail.com">lilysuau@gmail.com</a>
+                <p>Detroit, MI</p>
+            </div>
+            <div class="separator inline">
+                <h4>Core Technologies</h4>
+                <p *ngFor="let data of technologies"><span><i class="fa-solid fa-chevron-right"></i></span>{{data}}</p>
+            </div>
+            <div class="separator inline">
+                <h4>Tools/Software</h4>
+                <p *ngFor="let tool of tools"><span><i class="fa-solid fa-chevron-right"></i></span>{{tool}}</p>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-10">
+            <h1 class="bold b-9">Lilia Suau</h1>
+            <h5>Experienced Full Stack Developer and UI Desginer.</h5>
+            <p class="w-intro">{{intro}}</p>
+            <div class="content" id="strike">
+                <h3>Experience</h3>
+                <ul class="companies">
+                    <li class="company" *ngFor="let e of experience">
+                        <header>
+                            <h4>{{e.company}} <span>{{e.position}}</span></h4>
+                            <span class="date">{{e.dates}}</span>
+                        </header>
+                        <ul class="description">
+                            <li *ngFor="let detail of e.about">
+                                <p><span><i class="fa-solid fa-chevron-right"></i></span>{{detail}}</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>Education</h3>
+                <ul class="companies">
+                    <li class="company">
+                        <header>
+                            <h5 class="educ">Computer Science <span>Oakland University</span></h5>
+                            <span class="date">September 2016 - 2021</span>
+                        </header>
+                        <ul>
+                            <li>
+                                <p><span><i class="fa-solid fa-chevron-right"></i></span>Professional Track: Cyber Security</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>Projects</h3>
+                <ul class="companies">
+                    <li class="company" *ngFor="let project of projects">
+                        <header>
+                            <h5>{{project.name}}</h5>
+                        </header>
+                        <ul class="description" style="max-width: 100%">
+                            <li *ngFor="let detail of project.description">
+                                <p><span><i class="fa-solid fa-chevron-right"></i></span>{{detail}}</p>
+                            </li>
+                            <li *ngIf="project.link">
+                                <p><span><i class="fa-solid fa-chevron-right"></i></span><a href="{{project.link}}" target="_blank">www.greatlakesaud.com</a></p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- <div style="margin: 400px"></div> -->
+
+</section>

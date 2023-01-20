@@ -1,0 +1,29 @@
+.scroll_row {
+    display: flex;
+    overflow-x: visible;
+    overflow-y: visible;
+    margin-bottom: 80px;
+}
+
+.scroll_content {
+    display: flex;
+    flex-shrink: 0;
+    will-change: transform;
+}
+
+.scroll_container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-right: 100px;
+}
+
+h2 {
+    font-size: 70px;
+    margin-right: 10px;
+}
+
+button {
+    display: none;
+}
+

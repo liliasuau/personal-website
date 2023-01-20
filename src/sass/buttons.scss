@@ -1,0 +1,119 @@
+/*=================================================================*/
+/*                     BUTTONS
+/*=================================================================*/
+.btn {
+  transition: all 0.3s;
+  font-weight: 600;
+  border-radius: 2rem;
+  overflow: hidden;
+  line-height: 1;
+  padding: 12px 32px;
+  position: relative;
+
+  &:focus,
+  &:active {
+    box-shadow: none;
+    outline: 0;
+  }
+}
+
+.btn-blue {
+  background-color: $colordark;
+  border: 2px solid $colordark;
+  color: $white !important;
+
+  &:hover {
+    background-color: $white;
+    color: $text !important;
+    border: 2px solid $text;
+  }
+}
+
+.intro {
+  .btn-white {
+    margin-top: 20px;
+    border: 2px solid $white;
+    &:hover {
+      border: 2px solid $colordark;
+    }
+  }
+}
+
+.btn-white {
+  background-color: $white;
+  border: 2px solid $colordark;
+
+  &:hover {
+    background-color: $colordark;
+    color: $white;
+  }
+}
+
+.round-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #777;
+}
+
+.round-button:hover {
+  color: #777;
+}
+
+.round-button svg {
+  width: 40px;
+  height: 40px;
+}
+
+.round-button i {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.round-button .round-button-stroke {
+  fill: none;
+  stroke: $black;
+  stroke-width: 1;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+  position: relative;
+  z-index: -1;
+  opacity: .5;
+  color: $black;
+}
+
+.round-button .round-button-circle {
+  fill: none;
+  stroke: $black;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  stroke-dashoffset: 700;
+  stroke-dasharray: 700;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+  stroke-linecap: butt;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transition: 0.7s;
+  -o-transition: 0.7s;
+  transition: 0.7s;
+  color: $black;
+}
+
+.round-button:hover .round-button-circle {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 700;
+}
+
+button:focus {
+  outline: 0;
+}

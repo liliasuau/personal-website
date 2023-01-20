@@ -1,0 +1,21 @@
+<div class="element" id="works">
+	<h1>Recent Works</h1>
+    <!-- <h1>Recent Works & <span class="bold">Blog Posts</span></h1> -->
+	<div class="content" *ngFor="let index of data">
+		<div class="row justify-center" [ngClass]="index.reverse ? 'flex-row-reverse' : ''">
+			<div class="col-md-12 col-lg-6">
+                <div class="img-container animate-item">
+                    <img src="{{index.src}}">
+                </div>
+			</div>
+			<div class="col-md-12 col-lg-6">
+				<div class="mr-100">
+					<h5>{{index.work}}</h5>
+					<p>{{index.description}}</p>
+                    <p>{{index.more}}</p>
+				</div>
+                <button target="_blank" (click)="goToLink(index.link)" class="btn btn-white">{{index.button}}</button>
+			</div>
+		</div>
+	</div>
+</div>
