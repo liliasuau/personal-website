@@ -11,32 +11,32 @@ declare var $: any;
 })
 export class MenuComponent implements OnInit {
   public currentSection;
-  scrolled: boolean = false; 
+  scrolled: boolean = false;
   currImage: string = 'assets/images/lilias-logo-white.png';
   currUrl: number = 0;
 
   constructor(private activatedRoute: ActivatedRoute,
-    private router: Router) { 
-      router.events.subscribe((val) => {
-        if (val instanceof NavigationEnd ) {
-          if (val.url == '/resume') {
-            this.currUrl = 1;
-            // this.currImage = '/assets/images/lilias-logo.png';
-            $('#menu-toggle').addClass('black');
-            $('.navbar-brand').addClass('scroll');
-          }
-          else {
-            this.currUrl = 0;
-            this.currImage = 'assets/images/lilias-logo-white.png';
-            $('#menu-toggle').removeClass('black');
-            $('.navbar-brand').removeClass('scroll');
-            $('#return-to-top').addClass('hide');
-          }
-         }
-         
-         if (!(val instanceof NavigationEnd)) { return; }
-      });
-    }
+    private router: Router) {
+    router.events.subscribe((val) => {
+      if (val instanceof NavigationEnd) {
+        if (val.url == '/resume') {
+          this.currUrl = 1;
+          // this.currImage = '/assets/images/lilias-logo.png';
+          $('#menu-toggle').addClass('black');
+          $('.navbar-brand').addClass('scroll');
+        }
+        else {
+          this.currUrl = 0;
+          this.currImage = 'assets/images/lilias-logo-white.png';
+          $('#menu-toggle').removeClass('black');
+          $('.navbar-brand').removeClass('scroll');
+          $('#return-to-top').addClass('hide');
+        }
+      }
+
+      if (!(val instanceof NavigationEnd)) { return; }
+    });
+  }
 
   ngOnInit() {
   }
@@ -62,26 +62,28 @@ export class MenuComponent implements OnInit {
   onWindowScroll() {
     if (this.currUrl == 0) {
       var intro = document.getElementById("intro");
-      var experience = document.getElementById("experience");
-      var moving = document.getElementById("moving-content");
-      var contact = document.getElementById("contact");
-      var windowScrollPosition = window.scrollY + 0;
-      if(windowScrollPosition > intro!.offsetTop && windowScrollPosition < experience!.offsetTop || windowScrollPosition <= 0){
-        this.currImage = 'assets/images/lilias-logo-white.png';
-        $('.navbar-brand').removeClass('scroll');
-        $('#return-to-top').addClass('hide');
-        if (windowScrollPosition > 100) {
-          $('.navbar-brand').addClass('scroll');
+      if (intro) {
+        var experience = document.getElementById("experience");
+        var moving = document.getElementById("moving-content");
+        var contact = document.getElementById("contact");
+        var windowScrollPosition = window.scrollY + 0;
+        if (windowScrollPosition > intro!.offsetTop && windowScrollPosition < experience!.offsetTop || windowScrollPosition <= 0) {
+          this.currImage = 'assets/images/lilias-logo-white.png';
+          $('.navbar-brand').removeClass('scroll');
+          $('#return-to-top').addClass('hide');
+          if (windowScrollPosition > 100) {
+            $('.navbar-brand').addClass('scroll');
+          }
         }
-      }
-      else if(windowScrollPosition > experience!.offsetTop && windowScrollPosition < moving!.offsetTop){
-        $('#menu-toggle').removeClass('black');
-        $('#return-to-top').removeClass('hide');
+        else if (windowScrollPosition > experience!.offsetTop && windowScrollPosition < moving!.offsetTop) {
+          $('#menu-toggle').removeClass('black');
+          $('#return-to-top').removeClass('hide');
 
-      }
-      else if(windowScrollPosition > moving!.offsetTop && windowScrollPosition < contact!.offsetTop){
-        $('#menu-toggle').addClass('black');
-        $('#return-to-top').removeClass('hide');
+        }
+        else if (windowScrollPosition > moving!.offsetTop && windowScrollPosition < contact!.offsetTop) {
+          $('#menu-toggle').addClass('black');
+          $('#return-to-top').removeClass('hide');
+        }
       }
     }
   }

@@ -320,15 +320,15 @@ export class BirthdayComponent implements OnInit {
     }
 
     public updateImage(image: ImageInfo, index: number, data: any): void {
-        const imageRef = this.data.filter(x => x.id == data.id).map(x => x.src).flat();
-        const nextIndex = imageRef[index + 1];
+        // const imageRef = this.data.filter(x => x.id == data.id).map(x => x.src).flat();
+        // const nextIndex = imageRef[index + 1];
 
-        image.viewing = false;
+        // image.viewing = false;
 
-        if (nextIndex) {
-            nextIndex.viewing = true;
-        } else {
-            imageRef[0].viewing = true;
-        }
+        // if (nextIndex) {
+        //     nextIndex.viewing = true;
+        // } else {
+        //     imageRef[0].viewing = true;
+        // }
     }
 }
