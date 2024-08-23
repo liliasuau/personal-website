@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CookData, ImageInfo } from 'src/app/models/cook-data.dto';
-import { ConfettiService } from 'src/app/services/confetti.service';
+import { CookData, ImageInfo } from '../../models/cook-data.dto';
+import { ConfettiService } from '../../services/confetti.service';
 
 declare var $: any;
 @Component({
@@ -317,20 +317,6 @@ export class BirthdayComponent implements OnInit {
         $("#transform-right__2").css({ "transform": "translateX(" + this.right_2 + "%)" });
         $("#transform-left__1").css({ "transform": "translateX(" + this.left_1 + "%)" });
         $("#transform-left__2").css({ "transform": "translateX(" + this.left_2 + "%)" });
-    }
-
-    public scrollTo(section): void {
-        this.currentSection = section;
-        const sectionHtml = document.querySelector('#' + section);
-
-        if (sectionHtml !== null) {
-            sectionHtml.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
-            $('#return-to-top').addClass('hide');
-        }
-    }
-
-    public onSectionChange(sectionId: string): void {
-        this.currentSection = sectionId;
     }
 
     public updateImage(image: ImageInfo, index: number, data: any): void {
