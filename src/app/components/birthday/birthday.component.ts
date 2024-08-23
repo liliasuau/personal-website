@@ -20,7 +20,7 @@ export class BirthdayComponent implements OnInit {
     public left_2: number = -200;
 
     constructor(public confettiService: ConfettiService) {
-        this.introText = 'Surprise! We are taking a cooking class together :)';
+        this.introText = `Surprise! We're taking a cooking class together :)`;
         this.allData = [
             {
                 id: 1,
