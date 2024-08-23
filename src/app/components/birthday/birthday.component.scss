@@ -1,0 +1,59 @@
+.scroll_row {
+    display: flex;
+    overflow-x: visible;
+    overflow-y: visible;
+}
+
+.scroll_content {
+    display: flex;
+    flex-shrink: 0;
+    will-change: transform;
+}
+
+.scroll_container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-right: 100px;
+}
+
+h2 {
+    font-size: 70px;
+    //margin-right: 10px;
+    text-transform: uppercase;
+}
+
+.scroll_container {
+    margin-right: 20px;
+}
+
+
+#parentDiv {
+    margin-top: -500px;
+}
+
+.img-container {
+    border-radius: 5px;
+    margin-bottom: 15px;
+    //max-height: 400px;
+}
+
+.cover {
+    //max-height: 500px;
+    //margin-top: -100px;
+    max-height: 400px;
+}
+
+.btn-white {
+    margin-right: 10px;
+    //margin-bottom:10px;
+    padding: 6px 16px;
+}
+
+#experience .content {
+    padding: 1rem 0 !important;
+}
+
+// #parentDiv {
+//     margin-top: -550px;
+// }

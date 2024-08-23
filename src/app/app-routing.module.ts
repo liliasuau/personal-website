@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { BirthdayComponent } from './components/birthday/birthday.component';
 import { EmailSubmitComponent } from './components/contact/email-submit/email-submit.component';
 import { HomeComponent } from './home/home.component';
 import { ResumeComponent } from './resume/resume.component';
@@ -23,6 +24,7 @@ const routes: Routes = [];
         path: 'resume',
         component: ResumeComponent
       },
+      {path: 'birthday', component: BirthdayComponent},
       {path: 'success', component: EmailSubmitComponent},
       {path: '', redirectTo: '', pathMatch: 'full'},
       {path: '**', component: HomeComponent}

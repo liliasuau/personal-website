@@ -13,11 +13,13 @@ import { ComponentsModule } from './components/components.module';
 import { CommonModule } from '@angular/common';
 import { ResumeComponent } from './resume/resume.component';
 import { CanvasComponent } from './shared/canvas/canvas.component';
+import { BirthdayComponent } from './components/birthday/birthday.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    BirthdayComponent,
     ResumeComponent,
     MenuComponent,
     CanvasComponent,

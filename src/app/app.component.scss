@@ -9,3 +9,8 @@ app-menu {
     // height: 100px;
     top: 0;
 }
+
+.hide {
+    z-index: 0 !important;
+    display: none !important;
+}
