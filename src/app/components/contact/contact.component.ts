@@ -25,6 +25,10 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
   }
 
+  navigate(link: any) {
+    window.location.reload();
+  }
+
   onSubmit(form) {
     if (!form.valid) {
         this.isFormValid = false;
