@@ -1,0 +1,63 @@
+<div id="parentDiv" class="main-content">
+    <section id="moving-content">
+        <div class="content">
+            <!-- <h1>Nathan</h1> -->
+            <!-- <h1>Tech Stacks & <span class="bold">Tools and Technologies</span> I use</h1> -->
+            <div class="spacer-60"></div>
+            <div class="scroll_row">
+                <div class="scroll_content" id="transform-left__1">
+                    <div class="scroll_container custom">
+                        <h2>Happy Birthday <span class="fa-solid fa-heart"></span></h2>
+                    </div>
+                    <div class="scroll_container custom">
+                        <h2>Happy Birthday <span class="fa-solid fa-heart"></span></h2>
+                    </div>
+                </div>
+                <div class="scroll_content" id="transform-left__2">
+                    <div class="scroll_container custom">
+                        <h2>Happy Birthday <span class="fa-solid fa-heart"></span></h2>
+                    </div>
+                    <div class="scroll_container custom">
+                        <h2>Happy Birthday <span class="fa-solid fa-heart"></span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="element" id="experience">
+            <h1>Happy birthday, my love!</h1>
+            <p>{{introText}}</p>
+            <button class="btn btn-white" [ngClass]="categoryId == 5 ? 'add-blue': ''" (click)="filterData(5)">Show All</button>
+            <button class="btn btn-white" [ngClass]="categoryId == 1 ? 'add-blue': ''" (click)="filterData(1)">American</button>
+            <button class="btn btn-white" [ngClass]="categoryId == 2 ? 'add-blue': ''" (click)="filterData(2)">Italian</button>
+            <button class="btn btn-white" [ngClass]="categoryId == 4 ? 'add-blue': ''" (click)="filterData(4)">Parisian</button>
+            <ng-container *ngFor="let index of data">
+                <div class="content">
+                    <div class="row justify-center flex-row-reverse">
+                        <div class="col-md-12 col-lg-6 justify-center">
+                            <ng-container *ngFor="let info of index.src; let i=index">
+                                <div class="img-container animate-item" *ngIf="info.viewing">
+                                    <img class="cover" (click)="updateImage(info, i, index)" src="{{info.name}}">
+                                </div>
+                            </ng-container>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <div>
+                                <h2>{{index.title}} <a>{{index.subtitle}}</a></h2>
+                                <p>{{index.description}}</p>
+                                <p>{{index.more}}</p>
+                            </div>
+                            <ul style="margin-left: 15px;">
+                                <li *ngFor="let option of index.options">{{option}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+        
+    </section>
+      <!-- Go to top button -->
+    <a href="javascript:" id="return-to-top" (click)="scrollTo('intro')"><i class="fas fa-arrow-up"></i></a>
+</div>
