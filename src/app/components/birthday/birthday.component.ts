@@ -4,7 +4,7 @@ import { ConfettiService } from '../../services/confetti.service';
 
 declare var $: any;
 @Component({
-    selector: 'birthday',
+    selector: 'app-birthday',
     templateUrl: './birthday.component.html',
     styleUrls: ['./birthday.component.scss']
 })
